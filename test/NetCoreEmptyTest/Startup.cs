@@ -14,9 +14,7 @@ namespace NetCoreEmptyTest
         {
             services.AddLogDashboard(opt =>
             {
-                var authorizeAttributes = new[] { new AuthorizeAttribute("Cookie") };
-
-                opt.AddAuthorizeAttribute();
+                opt.AddAuthorizeAttribute(new AuthorizeAttribute("Cookie"));
             });
         }
 
