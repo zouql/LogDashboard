@@ -1,4 +1,5 @@
 ﻿using LogDashboard;
+using LogDashboard.Authorization.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -7,17 +8,11 @@ using Microsoft.Extensions.Hosting;
 
 namespace NetCoreEmptyTest
 {
-
-
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddLogDashboard(opt =>
-            {
-            });
-
+            services.AddLogDashboard(opt=>opt.AddAuthorizationFilter(new LogDashboardBasicAuthFilter("admin","admin")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
