@@ -2,7 +2,7 @@
 using LogDashboard.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -13,7 +13,7 @@ namespace LogDashboard.Repository.Dapper
 {
     public class DapperRepository<T> : IRepository<T> where T : class, ILogModel
     {
-        private readonly SqlConnection _conn;
+        private readonly DbConnection _conn;
 
         private readonly LogDashboardOptions _options;
 

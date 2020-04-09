@@ -281,7 +281,7 @@ WriteLiteral("</td>\r\n                            <td class=\"col-1\"><button c
 
             
             #line 135 "..\..\Views\Dashboard\Home.cshtml"
-                                                                        Write(item.Level.ToString());
+                                                                        Write(item.Level.ToUpper());
 
             
             #line default
@@ -291,7 +291,7 @@ WriteLiteral("\">");
 
             
             #line 135 "..\..\Views\Dashboard\Home.cshtml"
-                                                                                                Write(item.Level.ToString());
+                                                                                               Write(item.Level.ToUpper());
 
             
             #line default
@@ -340,7 +340,7 @@ WriteLiteral("</td>\r\n                            <td class=\"col-2\">");
 
             
             #line 147 "..\..\Views\Dashboard\Home.cshtml"
-                                         Write(item.LongDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                                         Write(item.LongDate.ToString("yyyy-MM-dd HH:mm:ss"));
 
             
             #line default
@@ -372,7 +372,7 @@ WriteLiteral("-info\">");
 
             
             #line 149 "..\..\Views\Dashboard\Home.cshtml"
-                                                                                Write(item.ToJsonString());
+                                                                                Write(Raw(item.ToJsonString()));
 
             
             #line default

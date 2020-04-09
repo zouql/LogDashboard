@@ -104,7 +104,7 @@ WriteLiteral("</span></td>\r\n");
             
             #line 25 "..\..\Views\Dashboard\TraceLogList.cshtml"
                   
-                        if (item.Level== LogLevel.ERROR)
+                        if (item.Level== LogLevelConst.Error)
                         {
 
             
@@ -145,7 +145,7 @@ WriteLiteral("                            <td class=\"col-1\"><button class=\"bt
 
             
             #line 37 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                                                                        Write(item.Level.ToString());
+                                                                        Write(item.Level.ToUpper());
 
             
             #line default
@@ -165,7 +165,7 @@ WriteLiteral("\").modal();\'>");
 
             
             #line 37 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                                                                                                                                             Write(item.Level.ToString());
+                                                                                                                                             Write(item.Level.ToUpper());
 
             
             #line default
@@ -187,7 +187,7 @@ WriteLiteral("                            <td class=\"col-1\"><button class=\"bt
 
             
             #line 41 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                                                                        Write(item.Level.ToString());
+                                                                        Write(item.Level.ToUpper());
 
             
             #line default
@@ -197,7 +197,7 @@ WriteLiteral("\">");
 
             
             #line 41 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                                                                                                Write(item.Level.ToString());
+                                                                                                Write(item.Level.ToUpper());
 
             
             #line default
@@ -244,7 +244,7 @@ WriteLiteral("\r\n                </td>\r\n                <td class=\"col-2\">"
 
             
             #line 54 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                             Write(item.LongDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                             Write(item.LongDate.ToString("yyyy-MM-dd HH:mm:ss"));
 
             
             #line default
@@ -277,7 +277,7 @@ WriteLiteral("</td>\r\n                                </tr>\r\n                
 
             
             #line 67 "..\..\Views\Dashboard\TraceLogList.cshtml"
-                                                       Write(item.LongDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                                                       Write(item.LongDate.ToString("yyyy-MM-dd HH:mm:ss"));
 
             
             #line default

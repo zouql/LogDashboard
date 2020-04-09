@@ -63,7 +63,7 @@ WriteLiteral(@"
                 <th class=""col-2"">时间</th>
                 <th class=""col-1"">详情</th>
             </tr>
-        </thead>
+        </thead>    
         <tbody class=""w-100"">
 ");
 
@@ -112,7 +112,7 @@ WriteLiteral("</td>\r\n                    <td class=\"col-1\"><button class=\"b
 
             
             #line 28 "..\..\Views\Dashboard\LogList.cshtml"
-                                                                Write(item.Level.ToString());
+                                                                Write(item.Level.ToUpper());
 
             
             #line default
@@ -122,7 +122,7 @@ WriteLiteral("\">");
 
             
             #line 28 "..\..\Views\Dashboard\LogList.cshtml"
-                                                                                        Write(item.Level.ToString());
+                                                                                       Write(item.Level.ToUpper());
 
             
             #line default
@@ -170,7 +170,7 @@ WriteLiteral("</td>\r\n                    <td class=\"col-2\">");
 
             
             #line 40 "..\..\Views\Dashboard\LogList.cshtml"
-                                 Write(item.LongDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                                 Write(item.LongDate.ToString("yyyy-MM-dd HH:mm:ss"));
 
             
             #line default
